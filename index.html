@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Time Machine</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <header class="top-bar">
+        <div class="logo">CLIMATE<span>TEMachine</span></div>
+        <div id="ticker" class="ticker-text">SYSTEM ONLINE // ENCRYPTED LINK</div>
+    </header>
+
+    <div class="control-panel">
+        <div class="input-group">
+            <label>Location</label>
+            <select id="citySelect">
+                <option value="Delhi">Delhi, IN</option>
+                <option value="Mumbai">Mumbai, IN</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Projection Year</label>
+            <select id="yearSelect">
+                <option value="2050">2050 (Mid-Century)</option>
+                <option value="2100">2100 (End-Century)</option>
+            </select>
+        </div>
+        <div class="scenario-toggle">
+            <button class="active" data-scenario="low">LOW</button>
+            <button data-scenario="high">HIGH</button>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <aside class="panel">
+            <div>
+                <h3 class="panel-title">LIVE MONITOR (2025)</h3>
+                <div class="stat-item"><span class="stat-label">TEMPERATURE</span><div id="l-temp" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">AIR QUALITY</span><div id="l-aqi" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">HUMIDITY</span><div id="l-hum" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">WIND SPEED</span><div id="l-wind" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">UV INDEX</span><div class="stat-val" style="color: #fbbf24;">MODERATE</div></div>
+            </div>
+            <div class="status-box">ENCRYPTED CONNECTION ACTIVE</div>
+        </aside>
+
+        <main class="visualizer">
+            <div class="image-split">
+                <div class="view-box"><img id="nowImg" src="" alt="Loading Now..."><div class="tag">BASE ERA</div></div>
+                <div class="view-box"><img id="futureImg" src="" alt="AI Generating..."><div class="tag highlight">AI PROJECTION</div></div>
+            </div>
+            <div id="map"></div>
+        </main>
+
+        <aside class="panel">
+            <div>
+                <h3 class="panel-title">FORECASTED IMPACT</h3>
+                <div class="stat-item"><span class="stat-label">EST. TEMPERATURE</span><div id="f-temp" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">EST. AQI</span><div id="f-aqi" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">SEA LEVEL RISE</span><div id="f-sea" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">HABITABILITY</span><div id="f-safe" class="stat-val">--</div></div>
+                <div class="stat-item"><span class="stat-label">FOOD SECURITY</span><div id="f-food" class="stat-val">--</div></div>
+            </div>
+            <div id="risk-alert" class="alert-box">ANALYZING RISK...</div>
+        </aside>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
