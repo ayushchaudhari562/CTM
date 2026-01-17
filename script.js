@@ -1,6 +1,4 @@
 
-const W_KEY = 'c8fe8ea124e09f3f35279dd0e1b2105f';
-const A_TOKEN = '9cdea5736b4361b01d827f34d71140b790db1393';
 
 let scenario = "low";
 let liveTemp = 25;
@@ -93,3 +91,4 @@ document.getElementById('yearSelect').onchange = () => update(document.getElemen
 
 // Run Initial
 window.onload = () => update("Delhi");
+
